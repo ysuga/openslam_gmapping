@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(openslam_gmapping)
 
-
 set(INC_INSTALL_DIR "/usr/local/include")
 set(LIB_INSTALL_DIR "/usr/local/lib")
 

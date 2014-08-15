@@ -1,4 +1,4 @@
-add_library(sensor_odometry odometryreading.cpp odometrysensor.cpp)
-target_link_libraries(sensor_odometry sensor_base)
+add_library(gmapping_sensor_odometry odometryreading.cpp odometrysensor.cpp)
+target_link_libraries(gmapping_sensor_odometry gmapping_sensor_base)
 
-install(TARGETS sensor_odometry DESTINATION ${LIB_INSTALL_DIR})
+install(TARGETS gmapping_sensor_odometry DESTINATION ${LIB_INSTALL_DIR})
