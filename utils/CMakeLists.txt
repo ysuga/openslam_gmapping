@@ -1,3 +1,4 @@
 include_directories(./)
 add_library(utils movement.cpp stat.cpp)
-install(TARGETS utils DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
+message("msg" ${LIB_INSTALL_DIR})
+install(TARGETS utils ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
