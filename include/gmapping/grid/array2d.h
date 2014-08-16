@@ -7,6 +7,15 @@
 
 #include <iostream>
 
+
+#ifdef WIN32
+
+#ifndef __PRETTY_FUNCTION__
+#define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
+#endif // WIN32
+
 namespace GMapping {
 
 template<class Cell, const bool debug=false> class Array2D{
