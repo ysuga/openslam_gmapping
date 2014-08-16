@@ -25,3 +25,6 @@ install(DIRECTORY include/
                   PATTERN "*.hxx"
    PATTERN ".svn" EXCLUDE
 )
+install(
+   EXPORT openslam_gmapping DESTINATION ${LIB_INSTALL_DIR}
+)
