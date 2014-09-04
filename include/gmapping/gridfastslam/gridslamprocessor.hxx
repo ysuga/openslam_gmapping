@@ -14,6 +14,7 @@ inline void GridSlamProcessor::scanMatch(const double* plainReading){
     OrientedPoint corrected;
     double score, l, s;
     score=m_matcher.optimize(corrected, it->map, it->pose, plainReading);
+	m_matcher.likelihoodAndScore(s, l, it->map, it->pose, plainReading);
     //    it->pose=corrected;
     if (score>m_minimumScore){
       it->pose=corrected;
@@ -25,7 +26,7 @@ inline void GridSlamProcessor::scanMatch(const double* plainReading){
 	}
     }
 
-    m_matcher.likelihoodAndScore(s, l, it->map, it->pose, plainReading);
+    
     sumScore+=score;
     it->weight+=l;
     it->weightSum+=l;
